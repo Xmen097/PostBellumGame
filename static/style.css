@@ -46,5 +46,24 @@
     left: 0;
     bottom: 0;
     right: 0;
-    border-top: 0.15vw solid black;;
+    border-top: 0.15vw solid black;
+}
+div.choice {
+    height: 100%;
+    border-right: 0.075vw solid black;
+    border-left: 0.075vw solid black;
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+div.choiceInside {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

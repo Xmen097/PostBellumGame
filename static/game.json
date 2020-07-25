@@ -10,7 +10,7 @@
 			"inputs": {
 				"locations": {
 					"connections": [{
-						"node": 2,
+						"node": 7,
 						"output": "output",
 						"data":{}
 					}]
@@ -38,10 +38,10 @@
 			"data": {},
 			"inputs": {},
 			"outputs": {
-				"output": {
+				"choices": {
 					"connections": [{
-						"node": 1,
-						"input": "locations",
+						"node": 7,
+						"input": "choices",
 						"data": {}
 					}]
 				}
@@ -138,6 +138,32 @@
 			},
 			"position": [1184.0854262486566,393.25395201040277],
 			"name": "Location"
+		},
+		"7": {
+			"id": 7,
+			"data": {
+				"name": "Start the game"
+			},
+			"inputs": {
+				"input": {
+					"connections": [{
+						"node": 2,
+						"output": "choices",
+						"data": {}
+					}]
+				}
+			},
+			"outputs": {
+				"output": {
+					"connections": [{
+						"node": 1,
+						"input": "locations",
+						"data": {}
+					}]
+				}
+			},
+			"position": [873.979333465066,429.99531558541497],
+			"name": "Choice"
 		}
 	}
 }

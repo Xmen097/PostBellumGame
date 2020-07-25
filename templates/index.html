@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Post Bellum Game</title>
-    <script src="{{ script_source }}" type="text/javascript"></script>
-     <link rel="stylesheet" href="{{ style_source }}">
+    <link rel="stylesheet" href="{{ style_source }}">
     <link rel="icon" href="static/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script>
+    json_data = JSON.parse('{{ data | safe }}'); // allows Flask to pass json directly to JS without AJAX
+    </script>
+    <script src="{{ script_source }}" type="text/javascript"></script>
 </head>
 <body>
 <div id="title">Post Bellum Game</div>
