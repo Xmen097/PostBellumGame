@@ -8,10 +8,6 @@
       <change beforePath="$PROJECT_DIR$/PostBellumGame-NodeManager/controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/PostBellumGame-NodeManager/controls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PostBellumGame-NodeManager/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/PostBellumGame-NodeManager/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/game.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595523428463</updated>
       <workItem from="1595523461648" duration="2605000" />
-      <workItem from="1595606731321" duration="19177000" />
+      <workItem from="1595606731321" duration="21134000" />
     </task>
     <servers />
   </component>
