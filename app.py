@@ -5,10 +5,10 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
+app.secret_key = 'Ur mom gay'
 
-UPLOAD_FOLDER = '/img'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = 'static/img'
 
 
 def allowed_file(filename):
@@ -25,9 +25,26 @@ def game():
                                data=file.read().replace("'", r"\'").replace("\n", ""))
 
 
-@app.route('/admin', methods=['GET'])
+@app.route('/admin', methods=['GET', 'POST'])
 def admin():
-    return render_template('/PostBellumGame-NodeManager')
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            print('No file part')
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], request.values['id']))  # saving files without extension to avoid duplicates. Browser will figure out the correct type.
+            print('Upload successful')
+    return app.send_static_file('PostBellumGame-NodeManager/index.html')
+
+
 
 if __name__ == '__main__':
     app.run()
