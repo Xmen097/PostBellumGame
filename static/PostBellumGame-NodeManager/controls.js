@@ -1,3 +1,4 @@
+
 var numSocket = new Rete.Socket('Number value');
 
 var VueNumControl = {
@@ -51,6 +52,7 @@ var VueTextControl = {
   },
   methods: {
     change(e){
+      this.value = e.target.value;
       this.update();
     },
     update() {
@@ -91,6 +93,7 @@ var VueLongTextControl = {
   },
   methods: {
     change(e){
+      this.value = e.target.value;
       this.update();
     },
     update() {
@@ -134,19 +137,18 @@ var VueImageControl = {
   methods: {
     change(e){
       this.update();
-      this.$el.children[2].submit();
     },
     update() {
       if (this.ikey){
-        this.putData(this.ikey, this.value)
+        this.putData(this.ikey, "1")
       }
-
-      this.emitter.trigger('process');
+      blocking_save();
+      this.$el.children[2].submit();
     }
   },
   mounted() {
-    this.value = this.getData(this.ikey);
-    this.$el.firstChild.src = "/static/img/"+this.id;
+    if(this.getData(this.ikey))
+      this.$el.firstChild.src = "/static/img/"+this.id+"?_=" + new Date().getTime();  // added to avoid image caching
   }
 }
 

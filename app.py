@@ -45,6 +45,14 @@ def admin():
     return app.send_static_file('PostBellumGame-NodeManager/index.html')
 
 
+@app.route('/admin/save', methods=['POST'])
+def save():
+    file = open(os.path.join('static', "game.json"), "w")
+    file.write(request.values['data'])
+    file.close()
+    print("JSON saved")
+    return ""
+
 
 if __name__ == '__main__':
     app.run()
