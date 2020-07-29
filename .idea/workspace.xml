@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c5d6fbc-dd16-46a7-b4e8-f83f96040787" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/PostBellumGame-NodeManager" beforeDir="false" afterPath="$PROJECT_DIR$/static/PostBellumGame-NodeManager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/game.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1595523461648" duration="2605000" />
       <workItem from="1595606731321" duration="21134000" />
       <workItem from="1595868655480" duration="8499000" />
-      <workItem from="1595882465519" duration="18849000" />
+      <workItem from="1595882465519" duration="18930000" />
     </task>
     <servers />
   </component>
