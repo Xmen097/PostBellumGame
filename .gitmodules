@@ -1,3 +1,3 @@
 [submodule "PostBellumGame-NodeManager"]
-	path = templates/PostBellumGame-NodeManager
+	path = static/PostBellumGame-NodeManager
 	url = https://github.com/petrsicho/PostBellumGame-NodeManager
