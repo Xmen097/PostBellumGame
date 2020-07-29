@@ -21,8 +21,8 @@ def allowed_file(filename):
 def game():
     with open(os.path.join(THIS_FOLDER, 'static/game.json')) as file:
         return render_template('index.html',
-                               script_source=os.path.join(THIS_FOLDER, 'static/game.js'),
-                               style_source=os.path.join(THIS_FOLDER, 'static/style.css'),
+                               script_source='static/game.js',
+                               style_source='static/style.css',
                                data=file.read().replace("'", r"\'").replace("\n", ""))
 
 
