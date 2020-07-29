@@ -7,8 +7,9 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = 'Ur mom gay'
 
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-app.config['UPLOAD_FOLDER'] = 'static/img'
+app.config['UPLOAD_FOLDER'] = os.path.join(THIS_FOLDER, 'static/img')
 
 
 def allowed_file(filename):
@@ -18,10 +19,10 @@ def allowed_file(filename):
 
 @app.route('/')
 def game():
-    with open('static/game.json') as file:
+    with open(os.path.join(THIS_FOLDER, 'static/game.json')) as file:
         return render_template('index.html',
-                               script_source='static/game.js',
-                               style_source='static/style.css',
+                               script_source=os.path.join(THIS_FOLDER, 'static/game.js'),
+                               style_source=os.path.join(THIS_FOLDER, 'static/style.css'),
                                data=file.read().replace("'", r"\'").replace("\n", ""))
 
 
@@ -47,7 +48,7 @@ def admin():
 
 @app.route('/admin/save', methods=['POST'])
 def save():
-    file = open(os.path.join('static', "game.json"), "w")
+    file = open(os.path.join(THIS_FOLDER, "static/game.json"), "w")
     file.write(request.values['data'])
     file.close()
     print("JSON saved")
