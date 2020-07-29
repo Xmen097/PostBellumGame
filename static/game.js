@@ -10,6 +10,7 @@ function main() {
 function choice(output) {
     current_location = json_data.nodes[output];
     document.getElementById("location").innerText = current_location.data.name;
+    document.getElementById("background").style.setProperty("background-image", "url(static/img"+current_location.id+")")
     display_choices()
 }
 
