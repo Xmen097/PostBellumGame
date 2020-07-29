@@ -1,5 +1,4 @@
 function main() {
-    current_location = undefined;
     for (let key in json_data.nodes) {
         if (json_data.nodes.hasOwnProperty(key) && json_data.nodes[key].name === "Start") {
             current_location = json_data.nodes[key];
@@ -23,4 +22,5 @@ function display_choices() {
     document.getElementById("choices").innerHTML = html;
 }
 
+current_location = undefined;
 window.onload = main;
